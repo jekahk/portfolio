@@ -4,7 +4,9 @@ import Typical from 'react-typical'
 import profilepic from './Assets/blackhoodie.png'
 import ParticlesBg from 'particles-bg'
 import {scroller as scroll } from 'react-scroll'
-import sclogo from './Assets/headerlogo.png' 
+import sclogo from './Assets/headerlogo.png'
+import apilogo from './Assets/SteamCheckAPI.png' 
+import jk from './Assets/JKportfolio.png'
 import github from './Assets/github.png'
 import linkedin from './Assets/linked.png'
 
@@ -95,7 +97,7 @@ const ScrollToSkills = () => {
 const Bot = () => {
 	return (
 		<React.Fragment>
-			<div className="things" style={{height: '300vh', width: '100vw'}}>
+			<div className="things" style={{height: '400vh', width: '100vw'}}>
 			<ParticlesBg color="#000000" num={120} type="cobweb" bg={true} />
 			<Home />
 			<div className="info">
@@ -123,8 +125,8 @@ const Bot = () => {
 						<div className='text2'>
 							<div className="text">
 								Steam Checker was my first own project.
-								The goal was to code a page with React.js that shows Steam profile 
-								statistics like profile picture, name, profile level, xp and number of badges. 
+								The goal was to code a page with React.js where you can search Steam profile 
+								statistics like profile picture, name, profile level and so forth by Steam ID or profile link. 
 								The site gets the profile information from an API that I have also made (look below Steam Checker API).
 							</div>
 							<a className="gitLink" href="https://github.com/jekahk/SteamChecker" target="_blank" rel="noopener noreferrer">
@@ -132,12 +134,26 @@ const Bot = () => {
 							</a>
 						</div>
 					</div>
+					<div className='lineProject'></div>
 					<div className="projectTiles">
-						<div>APi for the steam checker</div>
-						<div style={{marginLeft: '3vw'}}>yee</div>
+					<div className='text2'>
+						<div className="text">
+							Python Flask API that I made for the Steam Checker.
+							It scrapes the webpage of the profile requested and sends back an object containing the profile picture, name, level, xp (also how much xp needed for level up) and number of badges.
+							I host this API on a VPS and it has a domain name:
+						</div>
+						<div style={{marginTop: '0.5vh'}}>
+							https://www.steam-checker-api.xyz
+						</div>
+						<a className="gitLink" href="https://github.com/jekahk/SteamCheck_API" target="_blank" rel="noopener noreferrer">
+								Source code and more info here
+						</a>
 					</div>
+						<img className="apiLogo" src={apilogo} alt="apilogo" />
+					</div>
+					<div className='lineProject'></div>
 					<div className="projectTiles">
-						<div>picture</div>
+						<div><img className="jk" src={jk} alt="JK" /></div>
 						<div style={{marginLeft: '3vw'}}>This portfolio</div>
 					</div>
 				</div>
@@ -145,7 +161,7 @@ const Bot = () => {
 				<div className="headers">IT-Skills</div>
 				</div>
 				<div className="infoBox">
-					<div className="headers">Jutku</div>
+					<div className="headers">...</div>
 				</div>
 				<div className="infoBox">
 				<div className="headers">Contact me @</div>
@@ -165,7 +181,7 @@ const App = () => {
 	React.useEffect(() => {
 		sleep(5000).then(()=>{
 			setRenderBot(true);
-			scroll.scrollTo('bottomQQQQQ', { smooth: true, duration: 2800 });
+			scroll.scrollTo('bottom', { smooth: true, duration: 2800 });
 			setRenderTop(true)
 		})
 	}, []);
