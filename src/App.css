@@ -1,3 +1,5 @@
+/* Page base */
+
 body {
 	background-color: #f3e500;
 }
@@ -10,37 +12,11 @@ body {
 	position: relative;
 }
 
-.info {
-	width: 70vw;
-	height: 300vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #e4d801e0;
-	top: 106vh;
-	border-radius: 7px;
-	border-top: 5px solid rgba(0, 0, 0, 0.836);
+::-webkit-scrollbar {
+	width: 0;
 }
 
-.infoBox {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 45vW;
-	margin-top: 5vh;
-}
-
-.typical {
-	font-size: 2rem;
-	color: #ffffff;
-}
-
-.profilepic {
-	margin-top: 10vh;
-	height: 50vh;
-	border-radius: 50%;
-	box-shadow: 0 0 10px 5px #282a2d;
-}
+/* Hello! intro page*/
 
 .intro {
 	background: rgb(0, 0, 0);
@@ -53,68 +29,33 @@ body {
 	align-items: center;
 }
 
-::-webkit-scrollbar {
-	width: 0;
+.typical {
+	font-size: 2rem;
+	color: #ffffff;
 }
 
-.sc {
-	margin-top: 3vh;
-	margin-bottom: 3vh;
-	display: 'table-cell';
-}
+/* Front home page */
 
-.scLogo {
-	height: 13vh;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-.scLogo:hover {
-	-webkit-transform: scale(1.07);
-	transform: scale(1.07);
-	-webkit-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
-}
-
-.apiLogo {
-	height: 20vh;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	margin-left: 3vw;
-}
-
-.jk {
-	height: 25vh;
-}
-
-.headers {
-	font-size: 2.5rem;
-	margin-top: 3vh;
-	margin-bottom: 7vh;
-}
-
-.footer {
-	height: 10vh;
-	width: 100vw;
-	background-color: rgb(0, 0, 0);
-	position: relative;
+.pictureHome {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	margin-top: -10vh;
 }
 
-.github {
-	margin-top: 0.8vh;
-	margin-right: -1vw;
-	margin-bottom: 0.5vh;
-	width: auto;
-	height: 4.5vh;
+.profilepic {
+	margin-top: 10vh;
+	height: 50vh;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 5px #282a2d;
 }
 
-.linkedin {
-	margin-top: 0.9vh;
-	margin-right: 1vw;
-	margin-bottom: 0.5vh;
-	width: auto;
-	height: 4.5vh;
+.line {
+	border: 1px solid black;
+	border-radius: 10%;
+	width: 50vw;
+	margin-left: 25%;
+	margin-top: 7.5vh;
 }
 
 .navText {
@@ -150,6 +91,217 @@ button:hover {
 	transition: .1s ease-in-out;
 }
 
+.navButtons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100vw;
+	margin-top: 7.5vh;
+}
+
+.home {
+	height: 112vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Info box */
+
+.things {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info {
+	width: 70vw;
+	height: 400vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #e4d801e0;
+	top: 106vh;
+	border-radius: 7px;
+	border-top: 5px solid rgba(0, 0, 0, 0.836);
+}
+
+.infoBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 45vW;
+	margin-top: 7vh;
+}
+
+.headers {
+	font-size: 2.5rem;
+	margin-top: 3vh;
+	margin-bottom: 7vh;
+}
+
+.text {
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+.text2 {
+	display: flex;
+	flex-direction: column;
+	margin-left: 3vw;
+	text-align: center;
+}
+
+/* Hobbies part in info box */
+
+.list {
+	text-align: center;
+	font-size: 1.4rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Projects part in info box */
+
+.projectTiles {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.lineProject {
+	border: 1px solid black;
+	border-radius: 10%;
+	width: 15vw;
+	margin-left: 0;
+	margin-top: 7vh;
+	margin-bottom: 7vh;
+}
+
+.sc {
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+	display: 'table-cell';
+}
+
+.scLogo {
+	height: 13vh;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.scLogo:hover {
+	-webkit-transform: scale(1.07);
+	transform: scale(1.07);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.apiLogo {
+	height: 20vh;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	margin-left: 3vw;
+}
+
+.jk {
+	height: 25vh;
+}
+
+.gitLink {
+	margin-top: 0.7rem;
+	font-size: 0.9rem;
+}
+
+/* Skills part in info box */
+
+.headers2 {
+	font-size: 1.5rem;
+	margin-bottom: 7vh;
+}
+
+.headerTable {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.nameTable {
+	margin: 2vh;
+}
+.lineSkills {
+	border: 1px solid black;
+	width: auto;
+	margin-left: 0;
+	margin-top: 2px;
+	margin-bottom: 1px;
+}
+
+.lineSkills2 {
+	border: 1px solid black;
+	width: 305px;
+	margin-left: 0;
+	margin-top: 2px;
+	margin-bottom: 2vh;
+}
+
+.language {
+	width: 250px;
+}
+
+/* Contact me part in info box */
+
+.linkedinB {
+	height: 10vh;
+	margin-left: 20px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.linkedinB:hover {
+	-webkit-transform: scale(1.07);
+	transform: scale(1.07);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.email {
+	height: 10vh;
+}
+
+.lineContact {
+	border: 1px solid black;
+	width: 30vh;
+	margin-left: 0;
+	margin-top: 5vh;
+	margin-bottom: 6vh;
+}
+
+/* Footer */
+
+.footer {
+	height: 10vh;
+	width: 100vw;
+	background-color: rgb(0, 0, 0);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.github {
+	margin-top: 0.8vh;
+	margin-right: -1vw;
+	margin-bottom: 0.5vh;
+	width: auto;
+	height: 4.5vh;
+}
+
+.linkedin {
+	margin-top: 0.9vh;
+	margin-right: 1vw;
+	margin-bottom: 0.5vh;
+	width: auto;
+	height: 4.5vh;
+}
+
 .links {
 	display: flex;
 	flex-direction: row-reverse;
@@ -166,77 +318,4 @@ button:hover {
 .createdText {
 	color: white;
 	font-size: 0.85rem;
-}
-
-.home {
-	height: 112vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.things {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.navButtons {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100vw;
-	margin-top: 7.5vh;
-}
-
-.pictureHome {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: -10vh;
-}
-
-.line {
-	border: 1px solid black;
-	border-radius: 10%;
-	width: 50vw;
-	margin-left: 25%;
-	margin-top: 7.5vh;
-}
-
-.text {
-	text-align: center;
-	font-size: 1.1rem;
-}
-
-.text2 {
-	display: flex;
-	flex-direction: column;
-	margin-left: 3vw;
-	text-align: center;
-}
-
-.gitLink {
-	margin-top: 0.7rem;
-	font-size: 0.9rem;
-}
-
-.list {
-	text-align: center;
-	font-size: 1.4rem;
-	margin-bottom: 0.5rem;
-}
-
-.projectTiles {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.lineProject {
-	border: 1px solid black;
-	border-radius: 10%;
-	width: 15vw;
-	margin-left: 0;
-	margin-top: 7vh;
-	margin-bottom: 7vh;
 }

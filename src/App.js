@@ -9,6 +9,8 @@ import apilogo from './Assets/SteamCheckAPI.png'
 import jk from './Assets/JKportfolio.png'
 import github from './Assets/github.png'
 import linkedin from './Assets/linked.png'
+import linkedinB from './Assets/linkedBlack.png'
+import emailIco from './Assets/email.png'
 
 const sleep = (time) => {
 	return new Promise((resolve) => setTimeout(resolve, time))
@@ -63,6 +65,96 @@ const Home = () => {
 	)
 }
 
+const TableRow = (props) => {
+	return(
+		<div style={{display:'flex', flexDirection: 'row'}}>
+			<div style={{marginRight: '2vw', width: '150px', fontSize: '1.1rem'}}>{props.skill}</div>
+			<div style={{fontSize: '1.1rem'}}>{props.level}</div>
+		</div>
+	)
+}
+
+const skillListCode = [
+	{
+		skill: 'React.js',
+		level: 'Good'
+	},
+	{
+		skill: 'Python',
+		level: 'Good'
+	},
+	{
+		skill: 'Java',
+		level: 'Avarage'
+	},
+	{
+		skill: 'C',
+		level: 'Basics'
+	}
+]
+
+const skillListOther = [
+	{
+		skill: 'Windows',
+		level: 'Excellent'
+	},
+	{
+		skill: 'Linux/Unix',
+		level: 'Good'
+	},
+	{
+		skill: 'Microsoft Office',
+		level: 'Excellent'
+	},
+	{
+		skill: 'Adobe Photoshop',
+		level: 'Avarage'
+	},
+	{
+		skill: 'Adobe Illustrator',
+		level: 'Tolerable'
+	},
+	{
+		skill: 'Sony Vegas',
+		level: 'Basics'
+	}
+]
+
+const TablesCode = () => {
+	return(
+		<div style={{marginBottom: '4vh'}}>
+			<div style={{display:'flex', flexDirection: 'row'}}>
+				<div style={{marginRight: '2vw', width: '150px', fontWeight: 'bold', fontSize: '1.2rem'}}>Skill</div>
+				<div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Level</div>
+			</div>
+			<div className="lineSkills"></div>
+			{skillListCode.map(({skill,level}) => (
+				<TableRow
+					skill={skill}
+					level={level}
+				/>
+			))}
+		</div>
+	)
+};
+
+const TablesOther = () => {
+	return(
+		<div style={{marginBottom: '4vh'}}>
+			<div style={{display:'flex', flexDirection: 'row'}}>
+				<div style={{marginRight: '2vw', width: '150px', fontWeight: 'bold', fontSize: '1.2rem'}}>Skill</div>
+				<div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Level</div>
+			</div>
+			<div className="lineSkills"></div>
+			{skillListOther.map(({skill,level}) => (
+				<TableRow
+					skill={skill}
+					level={level}
+				/>
+			))}
+		</div>
+	)
+};
 
 const Foot = () => {
 	return(
@@ -97,7 +189,7 @@ const ScrollToSkills = () => {
 const Bot = () => {
 	return (
 		<React.Fragment>
-			<div className="things" style={{height: '400vh', width: '100vw'}}>
+			<div className="things" style={{height: '500vh', width: '100vw'}}>
 			<ParticlesBg color="#000000" num={120} type="cobweb" bg={true} />
 			<Home />
 			<div className="info">
@@ -153,20 +245,63 @@ const Bot = () => {
 					</div>
 					<div className='lineProject'></div>
 					<div className="projectTiles">
-						<div><img className="jk" src={jk} alt="JK" /></div>
-						<div style={{marginLeft: '3vw'}}>This portfolio</div>
+						<div><img className="jk" src={jk} alt="JK"  style={{marginRight: '3vw'}} /></div>
+						<div className='text2'>
+							<div className="text">
+								This portfolio page that you are looking right now. 
+								The intent was to bring information about me and my projects to one place.
+								The page is coded with React.js.
+							</div>
+							<a className="gitLink" href="https://github.com/jekahk/portfolio" target="_blank" rel="noopener noreferrer">
+								Source code and more info here
+							</a>
+						</div>
 					</div>
 				</div>
 				<div name="skills" className="infoBox">
 				<div className="headers">IT-Skills</div>
+					<div style={{display: 'flex', flexDirection: 'row'}}>
+						<div style={{display: 'flex', flexDirection: 'column', marginRight:'5vw'}} >
+							<div className="headers2" style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>Code</div>
+							<TablesCode/>
+						</div>
+						<div style={{display: 'flex', flexDirection: 'column'}} >
+							<div className="headers2" style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>Other</div>
+							<TablesOther/>
+						</div>
+					</div>
 				</div>
 				<div className="infoBox">
-					<div className="headers">...</div>
+					<div className="headers">Language Skills</div>
+					<div className="headerTable">
+						<div className="language">Finnish</div>
+						<div>Native</div>
+					</div>
+					<div className="lineSkills2"></div>
+					<div className="headerTable">
+						<div className="language">English</div>
+						<div>Fluent</div>
+					</div>
+					<div className="lineSkills2"></div>
+					<div className="headerTable">
+						<div className="language">Swedish</div>
+						<div>Basics</div>
+					</div>
+					<div className="lineSkills2"></div>
 				</div>
 				<div className="infoBox">
-				<div className="headers">Contact me @</div>
+					<div className="headers">Contact me @</div>
+						<div style={{display:'flex', flexDirection:'column'}}>
+							<a style={{ display: 'table-cell' }} href="https://www.linkedin.com/in/julius-k%C3%A4hk%C3%B6nen-92b840202/" target="_blank" rel="noopener noreferrer">
+								<img className="linkedinB" src={linkedinB} alt="linkedin" />
+							</a>
+						</div>
+						<div style={{fontSize: '0.8rem', marginLeft: '10px', marginTop: '2px'}}>Linkedin</div>
+						<div className="lineContact"></div>
+						<img className="email" src={emailIco} alt="email" />
+						<div style={{marginTop: '17px', fontWeight: 'bold', fontSize:'1.3rem'}}>julius.kahkonen@gmail.com</div>
 				</div>
-			</div>
+				</div>
 			</div>
 			<Foot/>
 		</React.Fragment>
@@ -181,7 +316,7 @@ const App = () => {
 	React.useEffect(() => {
 		sleep(5000).then(()=>{
 			setRenderBot(true);
-			scroll.scrollTo('bottom', { smooth: true, duration: 2800 });
+			scroll.scrollTo('bottomQQQQ', { smooth: true, duration: 2800 });
 			setRenderTop(true)
 		})
 	}, []);
