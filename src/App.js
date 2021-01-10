@@ -316,7 +316,7 @@ const App = () => {
 	React.useEffect(() => {
 		sleep(5000).then(()=>{
 			setRenderBot(true);
-			scroll.scrollTo('bottomQQQQ', { smooth: true, duration: 2800 });
+			scroll.scrollTo('bottom', { smooth: true, duration: 2800 });
 			setRenderTop(true)
 		})
 	}, []);
