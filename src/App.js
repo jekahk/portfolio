@@ -85,7 +85,7 @@ const skillListCode = [
 	},
 	{
 		skill: 'Java',
-		level: 'Avarage'
+		level: 'Average'
 	},
 	{
 		skill: 'C',
@@ -108,7 +108,7 @@ const skillListOther = [
 	},
 	{
 		skill: 'Adobe Photoshop',
-		level: 'Avarage'
+		level: 'Average'
 	},
 	{
 		skill: 'Adobe Illustrator',
@@ -196,9 +196,9 @@ const Bot = () => {
 				<div name="me" className="infoBox">
 					<div className="headers">Who am I?</div>
 					<div className="text">
-						I'm 22 years old student from Turku Finland. 
+						I'm a 22 years old student from Turku Finland. 
 						I moved here from Masku because of my studies and have lived in Turku two and a half years now.
-						I study Computer Sience at the University of Turku. 
+						I study Computer Science at the University of Turku. 
 						My studies started in 2018, so now I'm close to the end of my bachelor degree. 
 						After that I will start studies for my master's degree. 
 						I have always had a great interest in computers and other tech. 
