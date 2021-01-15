@@ -12,13 +12,16 @@ import linkedin from './Assets/linked.png'
 import linkedinB from './Assets/linkedBlack.png'
 import emailIco from './Assets/email.png'
 
+//funciton, that when called starts a timer
 const sleep = (time) => {
 	return new Promise((resolve) => setTimeout(resolve, time))
 }
 
+//list for hobbies rendered in Bot
 const hobbies = ['🚲 Cycling', '🏂 Snowboarding','🎮 Playing videogames','🦾 Going to the gym','💻 Building and modifying PCs']
 const listItems = hobbies.map((hobby,i) => <div className="list "key={i}>{hobby}</div>);
 
+//component that returns the first "hello" page
 const Top = () => {
 	return (
 		<React.Fragment>
@@ -35,6 +38,7 @@ const Top = () => {
 	)
 };
 
+//component that returns the page where will be scrolled automatically after the "hello" page
 const Home = () => {
 	return(
 		<React.Fragment>
@@ -65,6 +69,7 @@ const Home = () => {
 	)
 }
 
+//component that returns rows for Skill table
 const TableRow = (props) => {
 	return(
 		<div style={{display:'flex', flexDirection: 'row'}}>
@@ -74,6 +79,7 @@ const TableRow = (props) => {
 	)
 }
 
+//Array for IT-Skills Code
 const skillListCode = [
 	{
 		skill: 'React.js',
@@ -93,6 +99,7 @@ const skillListCode = [
 	}
 ]
 
+//Array for IT-skills Other
 const skillListOther = [
 	{
 		skill: 'Windows',
@@ -120,6 +127,7 @@ const skillListOther = [
 	}
 ]
 
+//component that retuns the table for Code skills
 const TablesCode = () => {
 	return(
 		<div style={{marginBottom: '4vh'}}>
@@ -138,6 +146,7 @@ const TablesCode = () => {
 	)
 };
 
+//component that retuns the table for Other skills'
 const TablesOther = () => {
 	return(
 		<div style={{marginBottom: '4vh'}}>
@@ -156,6 +165,7 @@ const TablesOther = () => {
 	)
 };
 
+//component that returns Footer
 const Foot = () => {
 	return(
 		<React.Fragment>
@@ -176,6 +186,7 @@ const Foot = () => {
 	)
 };
 
+//functions thet scrolls to right place on the page
 const ScrollToProjects = () => {
 	scroll.scrollTo('projects', { smooth: true, duration: 1500 });
 }
@@ -186,6 +197,7 @@ const ScrollToSkills = () => {
 	scroll.scrollTo('skills', { smooth: true, duration: 1500 });
 }
 
+//component that returns all things after the "hello" page
 const Bot = () => {
 	return (
 		<React.Fragment>
@@ -308,10 +320,11 @@ const Bot = () => {
 };
 
 const App = () => {
-
+	//hooks for rendering the "hello" page and the rest
 	const [renderTop, setRenderTop] = React.useState(true);
 	const [renderBot, setRenderBot] = React.useState(false);
 
+	//waites some time before rendering rest of the page
 	React.useEffect(() => {
 		sleep(5000).then(()=>{
 			setRenderBot(true);
