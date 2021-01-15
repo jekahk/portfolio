@@ -71,6 +71,13 @@ body {
 	width: 20%;
 }
 
+.navBarParts2 {
+	display: flex;
+	justify-content: center;
+	width: 20%;
+	margin-left: 10vh;
+}
+
 button {
 	padding: 11px;
 	text-align: center;
@@ -112,6 +119,8 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100vw;
+	height: 500vh;
 }
 
 .info {
@@ -165,6 +174,12 @@ button:hover {
 .projectTiles {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+}
+
+.projectTiles2 {
+	display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 }
 
@@ -222,6 +237,17 @@ button:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+}
+
+.skillBox{
+	display: flex;
+	flex-direction: row;
+}
+
+.tableBox{
+	display: flex;
+	flex-direction: column;
+	margin-right: 5vw;
 }
 
 .nameTable {
@@ -318,4 +344,74 @@ button:hover {
 .createdText {
 	color: white;
 	font-size: 0.85rem;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 1400px) {
+	.things{
+		height: 600vh;
+	}
+
+	.info{
+		height: 500vh;
+	}
+	.projectTiles {
+		flex-direction: column;
+	}
+	.projectTiles2 {
+		flex-direction: column;
+	}
+
+	.text2{
+		margin-top: 2vh;
+		margin-left: 0;
+	}
+
+	.skillBox{
+		flex-direction: column;
+	}
+	
+	.tableBox{
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 568px) {
+	.typical{
+		font-size: 1.5rem;
+	}
+
+	.things{
+		height: 620vh;
+	}
+
+	.info{
+		height: 520vh;
+		width: 100vw;
+	}
+
+	.infoBox{
+		width: 75vw;
+	}
+
+	.profilepic {
+		height: 40vh;
+	}
+
+	.navButtons{
+		margin-top: 5vh;
+		flex-direction: column;
+	}
+
+	.navBarParts{
+		width: auto;
+	}
+	
+	.navBarParts2{
+		margin-top: 2vh;
+		width: auto;
+		margin-left: 0;
+	}
+
 }

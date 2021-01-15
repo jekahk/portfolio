@@ -1,5 +1,5 @@
 import React from 'react';
-import './app.css'
+import './App.css'
 import Typical from 'react-typical'
 import profilepic from './Assets/blackhoodie.png'
 import ParticlesBg from 'particles-bg'
@@ -49,12 +49,12 @@ const Home = () => {
 							<div className="navText">Projects</div>
 						</button>
 					</div>
-					<div className="navBarParts" style={{marginLeft: '10vh'}}>
+					<div className="navBarParts2">
 						<button onClick={ScrollToMe}>
 							<div className="navText">Me</div>
 						</button>
 					</div>
-						<div className="navBarParts" style={{marginLeft: '10vh'}}>
+						<div className="navBarParts2">
 							<button onClick={ScrollToSkills}>
 								<div className="navText">Skills</div>
 							</button>
@@ -189,7 +189,7 @@ const ScrollToSkills = () => {
 const Bot = () => {
 	return (
 		<React.Fragment>
-			<div className="things" style={{height: '500vh', width: '100vw'}}>
+			<div className="things">
 			<ParticlesBg color="#000000" num={120} type="cobweb" bg={true} />
 			<Home />
 			<div className="info">
@@ -197,10 +197,9 @@ const Bot = () => {
 					<div className="headers">Who am I?</div>
 					<div className="text">
 						I'm a 22 years old student from Turku Finland. 
-						I moved here from Masku because of my studies and have lived in Turku two and a half years now.
+						I moved here from Masku because of my studies and have lived in Turku for two and a half years now.
 						I study Computer Science at the University of Turku. 
-						My studies started in 2018, so now I'm close to the end of my bachelor degree. 
-						After that I will start studies for my master's degree. 
+						My studies started in 2018 and I plan to graduate in 2023 as Master of Science.
 						I have always had a great interest in computers and other tech. 
 					</div>
 				</div>
@@ -227,7 +226,8 @@ const Bot = () => {
 						</div>
 					</div>
 					<div className='lineProject'></div>
-					<div className="projectTiles">
+					<div className="projectTiles2">
+					<img className="apiLogo" src={apilogo} alt="apilogo" />
 					<div className='text2'>
 						<div className="text">
 							Python Flask API that I made for the Steam Checker.
@@ -241,11 +241,10 @@ const Bot = () => {
 								Source code and more info here
 						</a>
 					</div>
-						<img className="apiLogo" src={apilogo} alt="apilogo" />
 					</div>
 					<div className='lineProject'></div>
 					<div className="projectTiles">
-						<div><img className="jk" src={jk} alt="JK"  style={{marginRight: '3vw'}} /></div>
+						<div><img className="jk" src={jk} alt="JK" /></div>
 						<div className='text2'>
 							<div className="text">
 								This portfolio page that you are looking right now. 
@@ -260,8 +259,8 @@ const Bot = () => {
 				</div>
 				<div name="skills" className="infoBox">
 				<div className="headers">IT-Skills</div>
-					<div style={{display: 'flex', flexDirection: 'row'}}>
-						<div style={{display: 'flex', flexDirection: 'column', marginRight:'5vw'}} >
+					<div className="skillBox">
+						<div className="tableBox" >
 							<div className="headers2" style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>Code</div>
 							<TablesCode/>
 						</div>
