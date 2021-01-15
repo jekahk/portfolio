@@ -7,3 +7,5 @@ The page is coded using React.js with couple of small libraries: [react-scroll](
 ## Ruoadmap
 
 I would like to make the page more friendly on mobile devices. Currently the page can be concidered unreadable on mobile.
+
+-- Done, mobile responsiveness added 15.1.2021 --
