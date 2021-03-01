@@ -11,6 +11,7 @@ import github from './Assets/github.png'
 import linkedin from './Assets/linked.png'
 import linkedinB from './Assets/linkedBlack.png'
 import emailIco from './Assets/email.png'
+import globe from './Assets/globe.png'
 
 //funciton, that when called starts a timer
 const sleep = (time) => {
@@ -115,7 +116,7 @@ const skillListOther = [
 	},
 	{
 		skill: 'Adobe Photoshop',
-		level: 'Average'
+		level: 'Good'
 	},
 	{
 		skill: 'Adobe Illustrator',
@@ -267,6 +268,24 @@ const Bot = () => {
 								Source code and more info here
 							</a>
 						</div>
+					</div>
+				</div>
+				<div name="projects" className="infoBox">
+				<div className="headers">In progress</div>
+					<div className="projectTiles2">
+   					<div>
+      					<img className="countryLogo" src={globe} alt="countryLogo" />
+   					</div>
+   					<div className='text2'>
+							<div className="countyHeader">Country Info</div>
+      					<div className="text">
+         					React app that shows information about countries, for example capital and timezone. 
+         					It is also possible to filter the countries that you want the information out off.
+      					</div>
+      				<a className="gitLink" href="https://github.com/jekahk/Country-Info" target="_blank" rel="noopener noreferrer">
+        				 Source code and project progress here
+      				</a>
+   					</div>
 					</div>
 				</div>
 				<div name="skills" className="infoBox">
